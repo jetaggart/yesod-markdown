@@ -19,6 +19,10 @@ library
                      Settings.StaticFiles
                      Settings.Development
                      Handler.Home
+                     Handler.Page
+                     Markdown.Types
+                     Markdown.Post
+
 
     if flag(dev) || flag(library-only)
         cpp-options:   -DDEVELOPMENT

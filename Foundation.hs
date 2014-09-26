@@ -14,6 +14,8 @@ import Text.Jasmine (minifym)
 import Text.Hamlet (hamletFile)
 import Yesod.Core.Types (Logger)
 
+import Markdown.Types
+
 -- | The site argument for your application. This can be a good place to
 -- keep settings and values requiring initialization before your application
 -- starts running, such as database connections. Every handler will have
@@ -38,6 +40,7 @@ mkMessage "App" "messages" "en"
 -- Note that this is really half the story; in Application.hs, mkYesodDispatch
 -- generates the rest of the code. Please see the linked documentation for an
 -- explanation for this split.
+
 mkYesodData "App" $(parseRoutesFile "config/routes")
 
 type Form x = Html -> MForm (HandlerT App IO) (FormResult x, Widget)
