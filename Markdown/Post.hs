@@ -40,7 +40,7 @@ findPost postId = do
   contents <- readFile file
   let html = markdown def $ (fromStrict . pack) contents
   
-  return (Post postId html)
+  return $ Post postId html
 
 markdownFile :: FilePath -> Bool
 markdownFile = isInfixOf ".md"
