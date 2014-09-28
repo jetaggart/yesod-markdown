@@ -19,6 +19,7 @@ findPosts = do
   posts <- getDirectoryContents postDirectory
 
   return $ (map createPost . filter markdownFile) posts
+
   where
     createPost p = Post $ (splitName . partitionString) p
     splitName (fileName, _) = fileName
@@ -27,12 +28,6 @@ findPosts = do
 
     findIndexOf (Just index) = index
     findIndexOf Nothing = 0
-                   
-
 
     markdownFile = isInfixOf ".md"
-
-                             
-  
-  
 
