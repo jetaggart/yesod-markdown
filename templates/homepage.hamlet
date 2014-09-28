@@ -2,4 +2,5 @@
 
 <ul>
     $forall postId <- posts
-        <li> #{postId}
+        <li>
+            <a href="/p/#{postId}"> #{postId}
