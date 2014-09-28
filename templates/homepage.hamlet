@@ -3,4 +3,4 @@
 <ul>
     $forall postId <- posts
         <li>
-            <a href="/p/#{postId}"> #{postId}
+            <a href=@{PageR postId}> #{postId}
