@@ -1,5 +1,5 @@
 <h1> Hello
 
 <ul>
-    $forall Post name <- posts
-        <li> #{name}
+    $forall postId <- posts
+        <li> #{postId}
