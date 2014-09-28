@@ -7,6 +7,10 @@ import Import (Html)
 import System.Directory
 import Data.List
 import Text.Blaze.Html (toHtml)
+  
+import Data.Text.Lazy (fromStrict)
+import Data.Text (pack)
+import Text.Markdown
 
 import Markdown.Types
 
@@ -34,7 +38,7 @@ findPost postId = do
   let file = pd ++ "/" ++ postId ++ ".md"
 
   contents <- readFile file
-  let html = toHtml contents
+  let html = markdown def $ (fromStrict . pack) contents
   
   return (Post postId html)
 
