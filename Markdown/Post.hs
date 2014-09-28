@@ -9,7 +9,7 @@ import Markdown.Types
 
 
 
-data Post = Post PageName deriving (Show)
+data Post = Post PostId deriving (Show)
 
 findPosts :: IO [Post]
 findPosts = do

@@ -4,4 +4,4 @@
 /robots.txt RobotsR GET
 
 / HomeR GET
-/p/#PageName PageR GET
+/p/#PostId PageR GET
